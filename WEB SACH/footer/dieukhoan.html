@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="li">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+    <link rel="stylesheet" href="../css/product-item.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/deco.css">
+    <link rel="stylesheet" href="../css/horizontal-menu.css">
+    <title>Điều khoản sử dụng</title>
+
+</head>
+<body>
+    <!--header-->
+    <div class="header-page">
+        <header style="border-bottom-color: #A0522D;" class="header">
+
+            <div class="header-1">
+
+                <a href="../home.html" class="logo"> <i class="fas fa-book"></i> BOOKSTORE </a>
+
+                <form action="" class="search-form">
+                    <input type="search" name="" placeholder="Nhập sách cần tìm kiếm..." id="search-box">
+                    <label for="search-box" class="fas fa-search"></label>
+                </form>
+
+                <div class="icons" style="margin-top: 10px;">
+                    <div class="shopping" >
+                        <a href="../home.html" class="fas fa-shopping-cart"></a>
+                        <p>Giỏ hàng</p>
+                    </div>
+                    <div id="login">
+                        <div id="login-btn" >
+                            <a class="fas fa-sign-in-alt" style="margin-left: 25px;"></a>
+                            <p>Đăng Nhập</p>
+                        </div>
+                        <div id="register-btn">
+                            <a class="fas fa-user"></a>
+                            <p>Đăng ký</p>
+                        </div>
+                    </div>
+                    <div id="logout">
+                        <div style="display: flex;"><a class="fas fa-user"></a> <div id="hello-user"style="font-size: 1.8rem;"></div></div>
+                         <div id="logout-btn" >
+                            <a href="./home.html" style="font-size: 1.5rem;">Đăng xuất</a>
+                        </div>
+                    </div>
+                </div>
+               
+
+            </div>
+        </header>
+        <!--đăng nhập-->
+
+        <div class="login-form-container">
+
+            <div id="close-login-btn" class="fas fa-times"></div>
+
+            <form action="">
+                <h3>Đăng nhập</h3>
+                <span style="color: black;">Số điện thoại/Email</span>
+                <input type="text" name="" class="box" id="myText" placeholder="Nhập số điện thoại hoặc email" id="">
+                <span style="color: black;">Mật khẩu</span>
+                <input type="password" name="" class="box" placeholder="Nhập mật khẩu" id="">
+                <div class="checkbox">
+                    <input type="checkbox" name="" id="remember-me">
+                    <label for="remember-me">Nhớ mật khẩu</label>
+                </div>
+                <input type="button" onclick="userLogin()" value="Đăng nhập" id="btn1">
+                <p><a href="#">Quên mật khẩu? </a></p>
+            </form>
+            <!-- đăng ký -->
+
+        </div>
+        <div class="register-form-container">
+
+            <div id="close-register-btn" class="fas fa-times"></div>
+
+            <form action="">
+                <h3>Đăng ký</h3>
+                <span>Số điện thoại/Email</span>
+                <input type="text" name="" class="box" placeholder="Nhập số điện thoại hoặc email" id="">
+                <span>Mật khẩu</span>
+                <input type="password" name="" class="box" placeholder="Nhập mật khẩu" id="">
+                <span>Nhập lại mật khẩu</span>
+                <input type="password" name="" class="box" placeholder="Nhập lại mật khẩu" id="">
+                <div class="checkbox">
+                    <input type="checkbox" name="" id="remember-me">
+                    <label for="remember-me">Nhớ mật khẩu</label>
+                </div>
+                <input type="button" value="Đăng ký" id="btn2">
+            </form>
+        </div>
+    </div>
+
+    <!--quang cao-->
+    <div class="ads">
+        <div class="ads-book">
+            <a href="../home.html"><img src="../Hình ảnh/ads.png" alt="quangcao"></a>
+            
+        </div>
+        <div id="close-ads-btn" class="fas fa-times"></div>
+    </div>
+
+    <!--menu-->
+    <div class="menu-page">
+        <div class="menu-left">
+            <div id="main">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="dropdown-btn">Sách Văn Học
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="../lightnovel.html">Light Novel</a>
+                        <a href="../lichsu.html">Lịch sử</a>
+                    </div>
+                    <div class="dropdown-btn">Tự học
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="../ngoaingu.html">Ngoại ngữ</a>
+                    </div>
+                    <div class="dropdown-btn">Sách Tiếng Việt
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="../thieunhi.html">Thiếu Nhi</a>
+                    </div>
+                    <div class="dropdown-btn">Sách Đời Sống
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="../nauan.html">Nấu Ăn</a>
+                        <a href="../tamly-kynangsong.html">Tâm Lý</a>
+                    </div>
+                    <div class="dropdown-btn">Sách Văn Hoá
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="../Sách văn hóa/vanhoa.html">Bản Sắc Văn Hoá</a>
+                    </div>
+                </div>
+                <div class="container">
+                    <div >
+                        <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fas fa-bars" id="icon-menuleft"
+                            style="color: #A0522D; padding: 5px 50px; margin-top: -15px; display: block;"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="horizontal-menu">
+            <div class="menu">
+                <div class="menu-container">
+                    <ul class="list-menu">
+                        <li><a href="../home.html">Trang chủ</a></li>
+                        <li><a href="../footer/gioithieu.html">Giới thiệu</a></li>
+                        <li><a href="../footer/vanchuyen.html">Vận chuyển</a></li>
+                        <li><a href="../footer/csbm.html">Chính sách bảo mật</a></li>
+                        <li><a href="../footer/chinhsach.html">Liên hệ</a></li>
+                        <li><a href="../footer/dieukhoan.html">Điều khoản</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="noidung">
+        <div class="ndtrang">
+            <div class="empty" style="height: 20px;">
+
+            </div>
+    <h2>ĐIỀU KHOẢN SỬ DỤNG</h2>
+    <p>Chào mừng quí khách đến mua sắm tại BOOKSTORE. Sau khi truy cập vào website BOOKSTORE để tham khảo hoặc mua sắm, quí khách đã đồng ý tuân 
+        thủ và ràng buộc với những quy định của BOOKSTORE. Vui lòng xem kỹ các quy định và hợp tác với chúng tôi để xây dựng 1 website BOOKSTORE 
+        ngày càng thân thiện và phục vụ tốt những yêu cầu của chính quí khách. Ngoài ra, nếu có bất cứ câu hỏi nào về những thỏa thuận trên
+         đây, vui lòng email cho chúng tôi qua địa chỉ support@bookstorevn.com.
+    </p>
+    <p>Tài khoản khách hàng</p>
+    <p>Khi sử dụng dịch vụ BOOKSTORE, quí khách sẽ cung cấp cho chúng tôi thông tin về địa chỉ email, mật khẩu và họ tên để có được 1 tài khoản tại đây.
+         Việc sử dụng và bảo mật thông tin tài khoản là trách nhiệm và quyền lợi của quí khách khi sử dụng BOOKSTORE. Ngoài ra, những thông tin khác 
+         trong tài khoản như tên tuổi, địa chỉ.... là những thông tin sẽ giúp BOOKSTORE phục vụ quí khách tốt nhất. Trong trường hợp thông tin do
+        quí khách cung cấp không đầy đủ hoặc sai dẫn đến việc không thể giao hàng cho quí khách, chúng tôi có quyền đình chỉ hoặc từ chối phục vụ,
+          giao hàng mà không phải chịu bất cứ trách nhiệm nào đối với quí khách. Khi có những thay đổi thông tin của quí khách, vui lòng cập nhật lại
+         thông tin trong tài khoản tại BOOKSTORE. Quí khách phải giữ kín mật khẩu và tài khoản, hoàn toàn chịu trách nhiệm đối với tất cả các hoạt động
+         diễn ra thông qua việc sử dụng mật khẩu hoặc tài khoản của mình. Quí khách nên đảm bảo thoát khỏi tài khoản tại BOOKSTORE sau mỗi lần sử dụng
+         để bảo mật thông tin của mình.
+    </p>
+    <p>Quyền lợi bảo mật thông tin của khách hàng</p>
+    <p>
+        Khi sử dụng dịch vụ tại website BOOKSTORE, quí khách được đảm bảo rằng những thông tin cung cấp cho chúng tôi sẽ chỉ được dùng để nâng cao chất lượng
+         dịch vụ dành cho khách hàng của BOOKSTORE và sẽ không được chuyển giao cho 1 bên thứ ba nào khác vì mục đích thương mại. Thông tin của quí khách tại 
+         BOOKSTORE sẽ được chúng tôi bảo mật và chỉ trong trường hợp pháp luật yêu cầu, chúng tôi sẽ buộc phải cung cấp những thông tin này cho các cơ quan pháp luật.
+    </p>
+    <p>Trách nhiệm của khách hàng khi sử dụng dịch vụ của BOOKSTORE</p>
+    <p>
+        Quí khách tuyệt đối không được sử dụng bất kỳ công cụ, phương pháp nào để can thiệp, xâm nhập bất hợp pháp vào hệ thống hay làm thay đổi cấu trúc dữ liệu tại website BOOKSTORE. 
+        Quí khách không được có những hành động (thực hiện, cổ vũ) việc can thiệp, xâm nhập dữ liệu của BOOKSTORE cũng như hệ thống máy chủ của chúng tôi Ngoài ra, xin vui lòng 
+        thông báo cho quản trị web của BOOKSTORE ngay khi quí khách phát hiện ra lỗi hệ thống theo số điện thoại (+84)87654321  hoặc email support@bookstorevn.com
+    </p>
+    <p>
+        Quí khách không được đưa ra những nhận xét, đánh giá có ý xúc phạm, quấy rối, làm phiền hoặc có bất cứ hành vi nào thiếu văn hóa đối với người khác. 
+        Không nêu ra những nhận xét có tính chính trị ( tuyên truyền, chống phá, xuyên tạc chính quyền), kỳ thị tôn giáo, giới tính, sắc tộc.... 
+        Tuyệt đối cấm mọi hành vi mạo nhận, cố ý tạo sự nhầm lẫn mình là một khách hàng khác hoặc là thành viên Ban Quản Trị BOOKSTORE.
+    </p>
+    <p>Trách nhiệm và quyền lợi của BOOKSTORE</p>
+    <p>
+        Trong trường hợp có những phát sinh ngoài ý muốn hoặc trách nhiệm của mình, BOOKSTORE sẽ không chịu trách nhiệm về mọi tổn thất phát sinh. Ngoài ra, 
+        chúng tôi không cho phép các tổ chức, cá nhân khác quảng bá sản phẩm tại website FAHASA mà chưa có sự đồng ý bằng văn bản từ BOOKSTORE Corporation. 
+        Các thỏa thuận và quy định trong Điều khoản sử dụng có thể thay đổi vào bất cứ lúc nào nhưng sẽ được BOOKSTORE Corporation thông báo cụ thể trên website BOOKSTORE.
+    </p>
+    <div class="empty" style="height: 30px;">
+
+    </div>
+    </div> 
+    </div>
+
+       <!--footer & copyright-->
+    <div class="footer">
+        <div class="leftfooter">
+            <p class="bookstore" style=" color: white;"> <b><i class="fas fa-book"></i> BOOKSTORE</b></p>
+                    <h2>Nhà sách Việt Nam</h2>
+                    <ul class="social-icon">
+                        <li><a href=""><i class="fa fa-facebook" style="padding:0 10px; color: white;"></i></a></li>
+                        <li><a href=""><i class="fa fa-instagram" style="color: white;"></i></a></li>
+                    </ul>
+        </div>
+        <div class="centerfooter">
+            <h2>THÔNG TIN</h2>
+                    <ul style="color: white;">
+                        <li><a style="text-decoration: none;" href="./csbm.html">Chính sách bảo mật</a> </li>
+                        <li><a style="text-decoration: none;" href="./dieukhoan.html">Điều khoản sử dụng</a> </li>
+                        <li><a style="text-decoration: none;" href="./chinhsach.html">Đổi - Trả - Hoàn tiền</a> </li>
+                        <li><a style="text-decoration: none;" href="./vanchuyen.html">Vận chuyển</a> </li>
+                    </ul>
+        </div>
+        <div class="rightfooter">
+            <h2>LIÊN HỆ</h2>
+            <ul>
+                <li>
+                    <span><i class="fa fa-map-marker"></i></span>
+                    <span>Địa chỉ: </span>456 Sư Vạn Hạnh, Quận 10, TP.HCM <br>
+                </li>
+                <li>
+                    <span><i class="fa fa-phone"></i></span>
+                    <span>Số điện thoại: </span>0987654321 <br>
+                </li>
+                <li>
+                    <span><i class="fa fa-envelope"></i></span>
+                    <span>Email: </span>bookstorevn@gmail.com <br>
+                </li>
+            </ul>
+        </div>
+        <!--back to top-->
+    <div class="back-to-top">
+        <button id="myBtn" title="Top">
+            <i class="fas fa-arrow-up" style=" width: 100%; height: 100%; padding: 8px ;"></i>
+        </button>
+    </div>
+    </div>
+
+    <!--copy right-->
+    <div class="copyright">
+        <div class="copy">
+            <p><i class="far fa-copyright"></i> Copyright 2021 | Bookstore Viet Nam 06</p>
+        </div>
+    </div>
+
+    <!--java-->
+    <!--java header-->
+    <script src="https://kit.fontawesome.com/6a3efc2315.js" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+
+    <!--jave menu left-->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.getElementById("icon-menuleft").style.float="left";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+        
+    </script>
+    <!--hien thi them-->    
+   <script>
+       var button1 = document.getElementById("bnt-hienthi");
+      
+   button1.onclick = function(){
+       button1.innerHTML = '';
+    };
+   </script>
+
+    <!--bnt top-->
+    <script>
+        window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+
+if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+document.getElementById("myBtn").style.display = "block";
+} else {
+document.getElementById("myBtn").style.display = "none";
+}
+}
+
+document.getElementById('myBtn').addEventListener("click", function(){
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+});
+    </script>
+</body>
+</html>

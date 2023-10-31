@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BOOKSTORE</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/deco.css">
+    <link rel="stylesheet" href="./css/horizontal-menu.css">
+    <link rel="stylesheet" href="./css/product-item.css">
+    <link rel="stylesheet" href="./css/content.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        body{
+            font-family: "Lato", sans-serif;
+            background-color: #c3d7e7;
+            font-size: 17px;
+        }
+        
+.ads-book img{
+    width: 120rem;
+    border-radius: 10px;
+    height: 50rem;
+}
+
+        .slide-show{
+            height: 500px;
+            width: 90%;
+            margin: auto;
+            margin-top: 30px;
+        }
+        .carousel-inner img{
+            border-bottom-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .sidenav {
+            z-index: 2;
+        }
+        .demo {
+            z-index: 1;
+        }
+        .list-menu li a{
+            font-size: 2rem;
+        }
+        .carousel-inner img {
+            height: 500px;
+            
+        }
+        .right_ads_float
+        {
+            right: 1px;
+            display: block;
+            bottom:100px;
+            position:fixed;
+            z-index: 88;
+        }
+        .right_ads_float.active{
+    top:-105%;
+}
+
+        .right_ads_float img{
+            border-radius: 10px;
+            bottom:100px;
+        }
+
+ #close-right-ads-btn{
+     height: 20px;
+     width: 20px;
+     color: black;
+     background-color: #f8ad0a;
+     border-radius: 5px;
+     border: solid 2px rgb(160, 6, 6);
+     position: absolute ;
+     text-align: center;
+ }
+        .content-page{
+            font-family: "Lato", sans-serif;
+            width: 80%;
+            background-color:		#ece3d7;
+            margin: auto;
+            margin-top: 30px;
+            border-bottom-right-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        @-webkit-keyframes sale {
+	 0% { color: rgb(216, 69, 1); } 
+	 50% { color:#f8ad0a;  } 
+	 100% { color: rgb(216, 69, 1);  } 
+ }
+ @-moz-keyframes sale { 
+	 0% { color: rgb(216, 69, 1); } 
+	 50% { color: #f8ad0a; }
+	 100% { color: rgb(216, 69, 1); } 
+ }
+ @-o-keyframes sale { 
+	 0% { color: rgb(216, 69, 1); } 
+	 50% { color: #f8ad0a;  } 
+	 100% { color: rgb(216, 69, 1); } 
+ }
+ @keyframes sale { 
+	 0% { color: rgb(216, 69, 1); } 
+	 50% { color: #f8ad0a; }
+	 100% { color: rgb(216, 69, 1); } 
+ } 
+ .hd-name-ganday {
+    font-size: 35px;
+            width: 100%;
+	 -webkit-animation: sale 700ms infinite;
+	 -moz-animation: sale 700ms infinite; 
+	 -o-animation: sale 700ms infinite; 
+	 animation: sale 700ms infinite;
+}
+        .content-page .seemore button{
+            height: 50px;
+            width: 150px;
+            background-color:rgb(216, 69, 1) ;
+            color: white;
+            display: block;
+            margin: auto;
+            margin-top: 15px;
+            border: solid 2px rgb(177, 57, 2);
+            border-bottom-right-radius: 30px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+        .content-page button:hover{
+            background-color: rgb(219, 103, 49);
+            color: black;
+            border: solid 2px rgb(216, 69, 1);
+        }
+        .seemore{
+            font-size: 20px;
+        }
+        .content-page a{
+            text-decoration: none;
+        }
+        .card{
+            width: 320px;
+            height: 540px;
+            margin: auto;
+            color: #A0522D;
+            border:1.5px solid #7fb3c7;
+            border-bottom-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .card:hover{
+            background-color: #f3f3f3;
+        }
+        .card img{
+            height: 370px;
+            width: 300px;
+            margin-left: 10px;
+            border-bottom-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .hd-name{
+            font-size: 35px;
+            width: 100%;
+            color: rgb(216, 1, 48);
+        }
+        
+    </style>
+</head>
+<body>
+    <!--header-->
+    <div class="header-page">
+        <header style="border-bottom-color: #A0522D;" class="header">
+
+            <div class="header-1">
+
+                <a href="./home.html" class="logo"> <i class="fas fa-book"></i> BOOKSTORE </a>
+
+                <form action="" class="search-form">
+                    <input type="search" name="" placeholder="Nhập sách cần tìm kiếm..." id="search-box">
+                    <label for="search-box" class="fas fa-search"></label>
+                </form>
+
+                <div class="icons" style="margin-top: 10px;">
+                    <div class="shopping" >
+                        <a href="./home.html" class="fas fa-shopping-cart"></a>
+                        <p>Giỏ hàng</p>
+                    </div>
+                    <div id="login">
+                        <div id="login-btn" >
+                            <a class="fas fa-sign-in-alt" style="margin-left: 20px;"></a>
+                            <p>Đăng Nhập</p>
+                        </div>
+                        <div id="register-btn">
+                            <a class="fas fa-user"></a>
+                            <p>Đăng ký</p>
+                        </div>
+                    </div>
+                    <div id="logout">
+                        <div style="display: flex;"><a class="fas fa-user"></a> <div id="hello-user"style="font-size: 1.8rem;"></div></div>
+                         <div id="logout-btn" >
+                            <a href="./home.html" style="font-size: 1.5rem;">Đăng xuất</a>
+                        </div>
+                    </div>
+                </div>
+               
+
+            </div>
+        </header>
+        <!--đăng nhập-->
+
+        <div class="login-form-container">
+
+            <div id="close-login-btn" class="fas fa-times"></div>
+
+            <form action="">
+                <h3>Đăng nhập</h3>
+                <span style="color: black;">Số điện thoại/Email</span>
+                <input type="text" name="" class="box" id="myText" placeholder="Nhập số điện thoại hoặc email" id="">
+                <span style="color: black;">Mật khẩu</span>
+                <input type="password" name="" class="box" placeholder="Nhập mật khẩu" id="">
+                <div class="checkbox">
+                    <input type="checkbox" name="" id="remember-me">
+                    <label for="remember-me">Nhớ mật khẩu</label>
+                </div>
+                <input type="button" onclick="userLogin()" value="Đăng nhập" id="btn1">
+                <p><a href="#">Quên mật khẩu? </a></p>
+            </form>
+            <!-- đăng ký -->
+
+        </div>
+        <div class="register-form-container">
+
+            <div id="close-register-btn" class="fas fa-times"></div>
+
+            <form action="">
+                <h3>Đăng ký</h3>
+                <span>Số điện thoại/Email</span>
+                <input type="text" name="" class="box" placeholder="Nhập số điện thoại hoặc email" id="">
+                <span>Mật khẩu</span>
+                <input type="password" name="" class="box" placeholder="Nhập mật khẩu" id="">
+                <span>Nhập lại mật khẩu</span>
+                <input type="password" name="" class="box" placeholder="Nhập lại mật khẩu" id="">
+                <div class="checkbox">
+                    <input type="checkbox" name="" id="remember-me">
+                    <label for="remember-me">Nhớ mật khẩu</label>
+                </div>
+                <input type="button" value="Đăng ký" id="btn2">
+            </form>
+        </div>
+
+        <!--quang cao-->
+        <div class="ads">
+            <div class="ads-book">
+                <a href="./home.html"><img src="./Hình ảnh/ads.png" alt=""></a>
+            </div>
+            <div id="close-ads-btn" class="fas fa-times"></div>
+        </div>
+    </div>
+
+    <!--menu-->
+    <div class="menu-page">
+        <div class="menu-left">
+            <div id="main">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="dropdown-btn">Sách Văn Học
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="./lightnovel.html">Light Novel</a>
+                        <a href="./lichsu.html">Lịch sử</a>
+                    </div>
+                    <div class="dropdown-btn">Tự học
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="./ngoaingu.html">Ngoại ngữ</a>
+                    </div>
+                    <div class="dropdown-btn">Sách Tiếng Việt
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="./thieunhi.html">Thiếu Nhi</a>
+                    </div>
+                    <div class="dropdown-btn">Sách Đời Sống
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="./nauan.html">Nấu Ăn</a>
+                        <a href="./tamly-kynangsong.html">Tâm Lý</a>
+                    </div>
+                    <div class="dropdown-btn">Sách Văn Hoá
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="./Sách văn hóa/vanhoa.html">Bản Sắc Văn Hoá</a>
+                    </div>
+                </div>
+                <div class="container">
+                    <div >
+                        <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fas fa-bars" id="icon-menuleft"
+                            style="color: #A0522D; padding: 5px 50px; margin-top: -15px; display: block;"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="horizontal-menu">
+            <div class="menu">
+                <div class="menu-container">
+                    <ul class="list-menu">
+                        <li><a href="./home.html">Trang chủ</a></li>
+                        <li><a href="./footer/gioithieu.html">Giới thiệu</a></li>
+                        <li><a href="./footer/vanchuyen.html">Vận chuyển</a></li>
+                        <li><a href="./footer/csbm.html">Chính sách bảo mật</a></li>
+                        <li><a href="./footer/chinhsach.html">Liên hệ</a></li>
+                        <li><a href="./footer/dieukhoan.html">Điều khoản</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--slide show-->
+    <div class="slide-show">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators" style="margin: auto; display: block; margin-top: 20px;">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+                <li data-target="#demo" data-slide-to="4"></li>
+            </ul>
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="hình slide show/ms_banner_img2.webp" alt="combosach">
+                </div>
+                <div class="carousel-item">
+                    <img src="hình slide show/ms_banner_img4.webp" alt="comic">
+                </div>
+                <div class="carousel-item">
+                    <img src="hình slide show/ms_banner_img5.webp" alt="bachtuoc">
+                </div>
+                <div class="carousel-item">
+                    <img src="hình slide show/1.png" alt="datealive">
+                </div>
+                <div class="carousel-item">
+                    <img src="hình slide show/Growup.jpg" alt="truongthanh">
+                </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+   
+    <!--quang cao phải-->
+    <div class="right_ads_float">
+        <div id="close-right-ads-btn" class="fas fa-times" style="cursor: pointer;"></div>
+        <div class="ads_right">
+            <a href='./sách ngoại ngữ/NN1.html'><img  height='150' src='./hình sách/quang cao/quang cao hack nao 1500.jpg' width='320'/></a>
+        </div>
+     </div>
+
+    <!--noi dung-->
+    <div class="content-page">
+        <div class="star" style="height: 30px;">
+
+        </div>
+        <!--gia soc-->
+        <div class="ganday">
+            <p class="hd-name-ganday"> <img style="height: 30px; width: 30px; margin-left: 30px; margin-top: -5px;" src="https://cdn0.fahasa.com/media/wysiwyg/icon-menu/ico_flashsale@3x.png" alt=""> Giá sốc</p>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-4">
+                    <div class="card">
+                        <a href="./light novel/LN5.html"><img class="card-img-top anh" src="hình sách/lightnovel/hanh-trinh-elaina-tap-9.jpg" alt="elaina9"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="./light novel/LN5.html"><h2 class="card-title ten">Hành Trình Của Elaina</h2></a>
+                                            <small class="tacgia text-muted">Jougi Shiraishi</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">94.400 ₫</div>
+                                                <div class="giacu text-muted">118.000 ₫</div>
+                                                <div class="sale">-20%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>                                                  
+                                                    <span class="text-muted">10 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <a href="Lịch sử/sls2.html"><img class="card-img-top anh" src="./Hình ảnh/sls2.jpg" alt="lich-su-loai-nguoi"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="Lịch sử/sls2.html"><h2 class="card-title ten">Sapiens Lược Sử Loài Người</h2></a>
+                                            <small class="tacgia text-muted">Yuval Noah Harari</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">212.380 ₫</div>
+                                                <div class="giacu text-muted">259.000 ₫</div>
+                                                <div class="sale">-18%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">1 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <a href="sách nấu ăn/NA2.html"><img class="card-img-top anh"
+                            src="./hình sách/sach nau an/NA2.jpg" alt="bep am nha vui"></a>
+                    <div class="card-body noidungsp mt-3">
+                        <a href="sách nấu ăn/NA2.html">
+                            <h2 class="card-title ten">Bếp ấm nhà vui</h2>
+                        </a>
+                        <small class="tacgia text-muted">Alphabooks</small>
+                        <div class="gia d-flex align-items-baseline">
+                            <div class="giamoi">70.000 ₫</div>
+                            <div class="giacu text-muted">72.000 ₫</div>
+                            <div class="sale">-3%</div>
+                        </div>
+                        <div class="danhgia">
+                            <ul class="d-flex" style="list-style: none;">
+                                <li class="active"><i class="fa fa-star"></i></li>
+                                <li class="active"><i class="fa fa-star"></i></li>
+                                <li class="active"><i class="fa fa-star"></i></li>
+                                <li class="active"><i class="fa fa-star"></i></li>
+                                <li class="active"><i class="fa fa-star"></i></li>                                                  
+                                <span class="text-muted">7 nhận xét</span>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+             </div>
+
+        <!--hien thi them-->
+        <div class="seemore" id="bnt-hienthi">
+            <button data-toggle="collapse" data-target="#hienthithem" >Hiển thị thêm</button>
+        </div>
+        
+        <div class="collapse" id="hienthithem">
+            
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-4">
+                    <div class="card">
+                        <a href="./sách ngoại ngữ/NN5.html"> <img class="card-img-top anh" src="hình sách/sách học ngoại ngữ/tuhoctienganh.jpg" alt="2000tuvung"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="./sách ngoại ngữ/NN5.html"><h2 class="card-title ten">Tự Học 2000 Từ Vựng Tiếng Anh Theo Chủ Đề (Tái Bản)</h2></a>
+                                            <small class="tacgia text-muted">The Windy</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">42.250 ₫</div>
+                                                <div class="giacu text-muted">65.000 ₫</div>
+                                                <div class="sale">-35%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">5 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <a href="Tâm lý - Kỹ Năng sống/kns3.html"><img class="card-img-top anh" src="./Hình ảnh/kns3.jpg" alt="dung-nem-giac-mo-cua-minh-vao-thung-rac"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="Tâm lý - Kỹ Năng sống/kns3.html"><h2 class="card-title ten">Đừng Ném Giấc Mơ Của Mình Vào Thùng Rác</h2></a>
+                                            <small class="tacgia text-muted">Paul McGee</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">112.000 ₫</div>
+                                                <div class="giacu text-muted">132.000 ₫</div>
+                                                <div class="sale">-15%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">3 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <a href="./Sách văn hóa/VH1.html"><img class="card-img-top anh" src="./hình sách/sach van hoa/vhhq.png"alt="nhatkylambanh"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="./Sách văn hóa/VH1.html"><h2 class="card-title ten">Văn Hóa Văn Minh Và Văn Hóa Truyền Thống Hàn</h2></a>
+                                            <small class="tacgia text-muted">Lê Quang Thiêm</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">42.000₫</div>
+                                                <div class="giacu text-muted">68.000 ₫</div>
+                                                <div class="sale">-15%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">10 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr style="border: 2; color: #A0522D; height: 3px; width: 80%; margin: auto; margin-top: 20px;">
+
+
+        <!--sach ngoai ngu-->
+        <div class="ngoaingu" style="margin-top: 40px;">
+            <p class="hd-name"> <img style="height: 30px; width: 30px; margin-left: 30px; margin-top: -5px;" src="https://cdn0.fahasa.com/skin/frontend/base/default/images/ico_dealhot.png" alt="snn"> Sách ngoại ngữ</p>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-4">
+                    <div class="card">
+                        <a href="./sách ngoại ngữ/NN1.html"><img class="card-img-top anh" src="hình sách/sách học ngoại ngữ/hacknao.jpg" alt="avhacknao"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="./sách ngoại ngữ/NN1.html"><h2 class="card-title ten">Hack Não 1500 (Tái bản)</h2></a>
+                                            <small class="tacgia text-muted">Nguyễn Văn Hiệp</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">445.500 ₫</div>
+                                                <div class="giacu text-muted">495.000 ₫</div>
+                                                <div class="sale">-10%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">5 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <a href="./sách ngoại ngữ/NN3.html"><img class="card-img-top anh" src="hình sách/sách học ngoại ngữ/tiengnhat.jpg" alt="nhat0"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="./sách ngoại ngữ/NN3.html"><h2 class="card-title ten">Chinh Phục Tiếng Nhật Từ Con Số 0</h2></a>
+                                            <small class="tacgia text-muted">Nhiều tác giả</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">97.500 ₫</div>
+                                                <div class="giacu text-muted">150.000 ₫</div>
+                                                <div class="sale">-35%</div>
+                                            </div>
+                                            <div class="danhgia" >
+                                                <ul class="d-flex" style="list-style: none; ">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">3 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <a href="./sách ngoại ngữ/NN5.html"> <img class="card-img-top anh" src="hình sách/sách học ngoại ngữ/tuhoctienganh.jpg" alt="2000tuvung"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="./sách ngoại ngữ/NN5.html"><h2 class="card-title ten">Tự Học 2000 Từ Vựng Tiếng Anh Theo Chủ Đề (Tái Bản)</h2></a>
+                                            <small class="tacgia text-muted">The Windy</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">42.250 ₫</div>
+                                                <div class="giacu text-muted">65.000 ₫</div>
+                                                <div class="sale">-35%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">5 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                    </div>
+                </div>
+                <div class="seemore">
+                    <a href="./ngoaingu.html"><button type="button">Xem thêm</button></a>
+                </div>
+            </div>
+        </div>
+
+        <hr style="border: 2; color: #A0522D; height: 3px; width: 80%; margin: auto; margin-top: 20px;">
+
+        <!--Sách tâm lý-->
+        <div class="sachtamly" style="margin-top: 40px;">
+            <p class="hd-name"> <img style="height: 30px; width: 30px; margin-left: 30px; margin-top: -5px;" src="https://cdn0.fahasa.com/skin/frontend/base/default/images/ico_dealhot.png" alt="snn"> Sách tâm lý</p>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-4">
+                    <div class="card">
+                        <a href="Tâm lý - Kỹ Năng sống/kns1.html"><img class="card-img-top anh" src="./Hình ảnh/kns1.jpg" alt="soidoilotcuu"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="Tâm lý - Kỹ Năng sống/kns1.html"><h2 class="card-title ten">Kẻ Hiếu Chiến Ngầm Và Các Thủ Thuật Thao Túng Tâm Lí</h2></a>
+                                            <small class="tacgia text-muted">Bác sĩ George K Simon</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">94.000 ₫</div>
+                                                <div class="giacu text-muted">110.000 ₫</div>
+                                                <div class="sale">-15%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">0 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <a href="Tâm lý - Kỹ Năng sống/kns3.html"><img class="card-img-top anh" src="./Hình ảnh/kns3.jpg" alt="dung-nem-giac-mo-cua-minh-vao-thung-rac"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="Tâm lý - Kỹ Năng sống/kns3.html"><h2 class="card-title ten">Đừng Ném Giấc Mơ Của Mình Vào Thùng Rác</h2></a>
+                                            <small class="tacgia text-muted">Paul McGee</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">112.000 ₫</div>
+                                                <div class="giacu text-muted">132.000 ₫</div>
+                                                <div class="sale">-15%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">3 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <a href="Tâm lý - Kỹ Năng sống/kns4.html"><img class="card-img-top anh" src="./Hình ảnh/kns4.jpg" alt="tam-ly-hoc"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="Tâm lý - Kỹ Năng sống/kns4.html"><h2 class="card-title ten">Tâm Lý Học Hiện Đại - Nhìn Thấu Tâm Can</h2></a>
+                                            <small class="tacgia text-muted">Ngụy Tri Siêu, Vương Hiểu Vy</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">134.000 ₫</div>
+                                                <div class="giacu text-muted">158.000 ₫</div>
+                                                <div class="sale">-15%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">1 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                    </div>
+                </div>
+                <div class="seemore">
+                    <a href="./tamly-kynangsong.html"><button type="button">Xem thêm</button></a>
+                </div>
+            </div>
+        </div>
+        <hr style="border: 2; color: #A0522D; height: 3px; width: 80%; margin: auto; margin-top: 20px;">
+
+            <!--Sach thieu nhi-->
+            <div class="sachthieunhi" style="margin-top: 40px;">
+                <p class="hd-name"> <img style="height: 30px; width: 30px; margin-left: 30px; margin-top: -5px;" src="https://cdn0.fahasa.com/skin/frontend/base/default/images/ico_dealhot.png" alt="snn"> Sách thiếu nhi</p>
+                <div class="row" style="margin-top: 10px;">
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="sách thiếu nhi/TN1.html"><img class="card-img-top anh" src="./hình sách/sach thieu nhi/TN1.jpg" alt="abqkd"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="sách nấu ăn/NA1.html"><h2 class="card-title ten">Cô bé quàng khăn đỏ</h2></a>
+                                            <small class="tacgia text-muted">Tân Việt</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">42.000₫</div>
+                                                <div class="giacu text-muted">50.000 ₫</div>
+                                                <div class="sale">-18%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">10 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="sách thiếu nhi/TN2.html"><img class="card-img-top anh" src="./hình sách/sach thieu nhi/TN2.jpg" alt="vcxx"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="sách nấu ăn/NA2.html"><h2 class="card-title ten">Vịt con xấu xí</h2></a>
+                                            <small class="tacgia text-muted">Nhà Xuất Bản Kim Đồng</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">30.000 ₫</div>
+                                                <div class="giacu text-muted">35.000 ₫</div>
+                                                <div class="sale">-15%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">1 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="sách thiếu nhi/TN5.html"><img class="card-img-top anh" src="./hình sách/sach thieu nhi/TN5.jpg" alt="nau an thong minh"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="sách thiếu nhi/TN5.html"><h2 class="card-title ten">Bạch Tuyết và 7 chú lùn</h2></a>
+                                            <small class="tacgia text-muted">Nhà xuất bản Kim Đồng</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">39.000 ₫</div>
+                                                <div class="giacu text-muted">45.000 ₫</div>
+                                                <div class="sale">-14%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>                                                  
+                                                    <span class="text-muted">10 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                        </div>
+                    </div>
+                    <div class="seemore">
+                        <a href="./thieunhi.html"><button type="button">Xem thêm</button></a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border: 2; color: #A0522D; height: 3px; width: 80%; margin: auto; margin-top: 20px;">
+
+            <!--tieu thuyet-->
+            <div class="tieu thuyet" style="margin-top: 40px;">
+                <p class="hd-name"> <img style="height: 30px; width: 30px; margin-left: 30px; margin-top: -5px;" src="https://cdn0.fahasa.com/skin/frontend/base/default/images/ico_dealhot.png" alt="snn"> Tiểu thuyết</p>
+                <div class="row" style="margin-top: 10px;">
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="./light novel/LN2.html"><img class="card-img-top anh" src="hình sách/lightnovel/datealive1.jpeg" alt="date a live"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="./light novel/LN2.html"><h2 class="card-title ten">Date A Live - Encore Tập 1</h2></a>
+                                            <small class="tacgia text-muted">Koushi Tachibana</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">86.400 ₫</div>
+                                                <div class="giacu text-muted">108.000 ₫</div>
+                                                <div class="sale">-20%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">1 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="./light novel/LN4.html"><img class="card-img-top anh" src="hình sách/lightnovel/grimgar__tap_11_2.jpg" alt="grimgar"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="./light novel/LN4.html"><h2 class="card-title ten">Grimgar - Ảo Ảnh Và Tro Tàn Tập 11</h2></a>
+                                            <small class="tacgia text-muted">Ao Jyumonji, Eiri Shirai</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">68.000 ₫</div>
+                                                <div class="giacu text-muted">85.000 ₫</div>
+                                                <div class="sale">-20%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">0 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="./light novel/LN5.html"><img class="card-img-top anh" src="hình sách/lightnovel/hanh-trinh-elaina-tap-9.jpg" alt="elaina9"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="./light novel/LN5.html"><h2 class="card-title ten">Hành Trình Của Elaina - Tập 9</h2></a>
+                                            <small class="tacgia text-muted">Jougi Shiraishi</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">94.400 ₫</div>
+                                                <div class="giacu text-muted">118.000 ₫</div>
+                                                <div class="sale">-20%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>                                                  
+                                                    <span class="text-muted">10 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                        </div>
+                    </div>
+                    <div class="seemore">
+                        <a href="./lightnovel.html"><button type="button">Xem thêm</button></a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border: 2; color: #A0522D; height: 3px; width: 80%; margin: auto; margin-top: 20px;">
+
+            <!--sach nau an-->
+            <div class="tieu thuyet" style="margin-top: 40px;">
+                <p class="hd-name"> <img style="height: 30px; width: 30px; margin-left: 30px; margin-top: -5px;" src="https://cdn0.fahasa.com/skin/frontend/base/default/images/ico_dealhot.png" alt="snn"> Sách nấu ăn</p>
+                <div class="row" style="margin-top: 10px;">
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="sách nấu ăn/NA2.html"><img class="card-img-top anh" src="./hình sách/sach nau an/NA2.jpg" alt="bep am nha vui"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="sách nấu ăn/NA2.html"><h2 class="card-title ten">Bếp ấm nhà vui</h2></a>
+                                            <small class="tacgia text-muted">Alphabooks</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">70.000 ₫</div>
+                                                <div class="giacu text-muted">72.000 ₫</div>
+                                                <div class="sale">-3%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">1 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="./sách nấu ăn/NA4.html"><img class="card-img-top anh" src="./hình sách/sach nau an/NA4.jpg "alt="sach an dam"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="./sách nấu ăn/NA4.html"><h2 class="card-title ten">Sách ăn dặm cho bé</h2></a>
+                                            <small class="tacgia text-muted">Thái Hà</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">100.000 ₫</div>
+                                                <div class="giacu text-muted">110.000 ₫</div>
+                                                <div class="sale">-10%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">0 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="./sách nấu ăn/NA5.html"><img class="card-img-top anh" src="./hình sách/sach nau an/NA5.jpg" alt="nau an thong minh"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="./sách nấu ăn/NA5.html"><h2 class="card-title ten">Nấu ăn thông minh</h2></a>
+                                            <small class="tacgia text-muted">Alphabooks</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">85.400 ₫</div>
+                                                <div class="giacu text-muted">90.000 ₫</div>
+                                                <div class="sale">-5%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>                                                  
+                                                    <span class="text-muted">10 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                        </div>
+                    </div>
+                    <div class="seemore">
+                        <a href="./nauan.html"><button type="button">Xem thêm</button></a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border: 2; color: #A0522D; height: 3px; width: 80%; margin: auto; margin-top: 20px;">
+
+                <!--Sach lich su-->
+                <div class="lichsu" style="margin-top: 40px;">
+                    <p class="hd-name"> <img style="height: 30px; width: 30px; margin-left: 30px; margin-top: -5px;" src="https://cdn0.fahasa.com/skin/frontend/base/default/images/ico_dealhot.png" alt="snn"> Sách lịch sử</p>
+                    <div class="row" style="margin-top: 10px;">
+                        <div class="col-4">
+                            <div class="card">
+                                <a href="Lịch sử/sls3.html"><img class="card-img-top anh" src="./Hình ảnh/sls3.jpg" alt="nangluong-lsnhanloai"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="Lịch sử/sls3.html"><h2 class="card-title ten">Năng Lượng - Lịch Sử Nhân Loại Từ Than Củi Tới Hạt Nhân</h2></a>
+                                            <small class="tacgia text-muted">Richard Rhodes</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">207.200 ₫</div>
+                                                <div class="giacu text-muted">259.000 ₫</div>
+                                                <div class="sale">-20%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">3 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <a href="Lịch sử/sls4.html"><img class="card-img-top anh" src="./Hình ảnh/sls4.jpg" alt="lich-su-a-rap"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="Lịch sử/sls4.html"><h2 class="card-title ten">Lịch Sử Văn Minh Ả Rập</h2></a>
+                                            <small class="tacgia text-muted">Will Durant</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">106.000 ₫</div>
+                                                <div class="giacu text-muted">177.000 ₫</div>
+                                                <div class="sale">-40%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">1 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <a href="Lịch sử/sls5.html"> <img class="card-img-top anh" src="./Hình ảnh/sls5.jpg" alt="su-ky-3"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="Lịch sử/sls5.html"><h2 class="card-title ten">Sử Ký III</h2></a>
+                                            <small class="tacgia text-muted">Tư Mã Thiên</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">202.300 ₫</div>
+                                                <div class="giacu text-muted">238.000 ₫</div>
+                                                <div class="sale">-15%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">0 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                        <div class="seemore">
+                            <a href="./lichsu.html"><button type="button">Xem thêm</button></a>
+                        </div>
+                    </div>
+                    <hr style="border: 2; color: #A0522D; height: 3px; width: 80%; margin: auto; margin-top: 20px;">
+
+                <!--sách văn hóa-->
+                <div class="tieu thuyet" style="margin-top: 40px;">
+                    <p class="hd-name"> <img style="height: 30px; width: 30px; margin-left: 30px; margin-top: -5px;" src="https://cdn0.fahasa.com/skin/frontend/base/default/images/ico_dealhot.png" alt="snn"> Sách văn hóa</p>
+                    <div class="row" style="margin-top: 10px;">
+                        <div class="col-4">
+                            <div class="card">
+                                <a href="./Sách văn hóa/VH1.html"><img class="card-img-top anh" src="./hình sách/sach van hoa/vhhq.png "alt="vhhq"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="./Sách văn hóa/VH1.html"><h2 class="card-title ten">Văn Hóa Văn Minh Và Văn Hóa Truyền Thống Hàn</h2></a>
+                                            <small class="tacgia text-muted">Lê Quang Thiêm</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">42.000₫</div>
+                                                <div class="giacu text-muted">68.000 ₫</div>
+                                                <div class="sale">-15%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">10 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <a href="./Sách văn hóa/VH2.html"><img class="card-img-top anh" src="./hình sách/sach van hoa/vhnb.jpg" alt="bep am nha vui"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="./Sách văn hóa/VH2.html"><h2 class="card-title ten">Đọc về văn hóa Nhật Bản</h2></a>
+                                            <small class="tacgia text-muted">Alphabooks</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">60.000 ₫</div>
+                                                <div class="giacu text-muted">82.000 ₫</div>
+                                                <div class="sale">-28%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">1 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <a href="./Sách văn hóa/VH4.html"><img class="card-img-top anh" src="./hình sách/sach van hoa/vn.png"alt="sach an dam"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="./Sách văn hóa/VH4.html"><h2 class="card-title ten">Văn Hóa Việt Nam (1945 - 1975)</h2></a>
+                                            <small class="tacgia text-muted">Hồng Đức</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">190.000 ₫</div>
+                                                <div class="giacu text-muted">209.000 ₫</div>
+                                                <div class="sale">-28%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">0 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                        <div class="seemore">
+                            <a href="./Sách văn hóa/vanhoa.html"><button type="button">Xem thêm</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>               
+        </div>
+        <div class="empty" style="height: 40px;">
+
+        </div>
+    </div>
+
+    
+
+    <!--footer & copyright-->
+    <div class="footer">
+        <div class="leftfooter">
+            <p class="bookstore" style=" color: white;"> <b><i class="fas fa-book"></i> BOOKSTORE</b></p>
+                    <h2>Nhà sách Việt Nam</h2>
+                    <ul class="social-icon">
+                        <li><a href=""><i class="fa fa-facebook" style="padding:0 10px; color: white;"></i></a></li>
+                        <li><a href=""><i class="fa fa-instagram" style="color: white;"></i></a></li>
+                    </ul>
+        </div>
+        <div class="centerfooter">
+            <h2>THÔNG TIN</h2>
+                    <ul style="color: white;">
+                        <li><a style="text-decoration: none;" href="./footer/csbm.html">Chính sách bảo mật</a> </li>
+                        <li><a style="text-decoration: none;" href="./footer/dieukhoan.html">Điều khoản sử dụng</a> </li>
+                        <li><a style="text-decoration: none;" href="./footer/gioithieu.html">Đổi - Trả - Hoàn tiền</a> </li>
+                        <li><a style="text-decoration: none;" href="./footer/vanchuyen.html">Vận chuyển</a> </li>
+                    </ul>
+        </div>
+        <div class="rightfooter">
+            <h2>LIÊN HỆ</h2>
+            <ul>
+                <li>
+                    <span><i class="fa fa-map-marker"></i></span>
+                    <span>Địa chỉ: </span>456 Sư Vạn Hạnh, Quận 10, TP.HCM <br>
+                </li>
+                <li>
+                    <span><i class="fa fa-phone"></i></span>
+                    <span>Số điện thoại: </span>0987654321 <br>
+                </li>
+                <li>
+                    <span><i class="fa fa-envelope"></i></span>
+                    <span>Email: </span>bookstorevn@gmail.com <br>
+                </li>
+            </ul>
+        </div>
+        <!--back to top-->
+    <div class="back-to-top">
+        <button id="myBtn" title="Top">
+            <i class="fas fa-arrow-up" style=" width: 100%; height: 100%; padding: 8px ;"></i>
+        </button>
+    </div>
+    </div>
+
+    <!--copy right-->
+    <div class="copyright">
+        <div class="copy">
+            <p><i class="far fa-copyright"></i> Copyright 2021 | Bookstore Viet Nam 06</p>
+        </div>
+    </div>
+
+    <!--java-->
+    <!--java header-->
+    <script src="https://kit.fontawesome.com/6a3efc2315.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+
+    <!--jave menu left-->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.getElementById("icon-menuleft").style.float="left";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+        
+    </script>
+    <!--hien thi them-->    
+   <script>
+       var button1 = document.getElementById("bnt-hienthi");
+      
+   button1.onclick = function(){
+       button1.innerHTML = '';
+    };
+   </script>
+
+    <!--bnt top-->
+    <script>
+        window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+
+if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+document.getElementById("myBtn").style.display = "block";
+} else {
+document.getElementById("myBtn").style.display = "none";
+}
+}
+
+document.getElementById('myBtn').addEventListener("click", function(){
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+});
+    </script>
+<!--quảng cáo phải-->
+<script>
+    let adsBookRight = document.querySelector('.right_ads_float');
+
+document.querySelector('#close-right-ads-btn').onclick = () =>{
+  adsBookRight.classList.toggle('active');
+}
+
+</script>
+
+
+     
+</body>
+</html>

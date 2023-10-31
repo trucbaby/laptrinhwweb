@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="li">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+    <link rel="stylesheet" href="../css/product-item.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/deco.css">
+    <link rel="stylesheet" href="../css/horizontal-menu.css">
+    <title>Liên hệ đổi/ trả/ hoàn tiền</title>
+    <style>
+        body{
+            text-align: justify;
+        }
+
+    </style>
+</head>
+<body>
+    <!--header-->
+    <div class="header-page">
+        <header style="border-bottom-color: #A0522D;" class="header">
+
+            <div class="header-1">
+
+                <a href="../home.html" class="logo"> <i class="fas fa-book"></i> BOOKSTORE </a>
+
+                <form action="" class="search-form">
+                    <input type="search" name="" placeholder="Nhập sách cần tìm kiếm..." id="search-box">
+                    <label for="search-box" class="fas fa-search"></label>
+                </form>
+
+                <div class="icons" style="margin-top: 10px;">
+                    <div class="shopping" >
+                        <a href="../home.html" class="fas fa-shopping-cart"></a>
+                        <p>Giỏ hàng</p>
+                    </div>
+                    <div id="login">
+                        <div id="login-btn" >
+                            <a class="fas fa-sign-in-alt" style="margin-left: 25px;"></a>
+                            <p>Đăng Nhập</p>
+                        </div>
+                        <div id="register-btn">
+                            <a class="fas fa-user"></a>
+                            <p>Đăng ký</p>
+                        </div>
+                    </div>
+                    <div id="logout">
+                        <div style="display: flex;"><a class="fas fa-user"></a> <div id="hello-user"style="font-size: 1.8rem;"></div></div>
+                         <div id="logout-btn" >
+                            <a href="./home.html" style="font-size: 1.5rem;">Đăng xuất</a>
+                        </div>
+                    </div>
+                </div>
+               
+
+            </div>
+        </header>
+        <!--đăng nhập-->
+
+        <div class="login-form-container">
+
+            <div id="close-login-btn" class="fas fa-times"></div>
+
+            <form action="">
+                <h3>Đăng nhập</h3>
+                <span style="color: black;">Số điện thoại/Email</span>
+                <input type="text" name="" class="box" id="myText" placeholder="Nhập số điện thoại hoặc email" id="">
+                <span style="color: black;">Mật khẩu</span>
+                <input type="password" name="" class="box" placeholder="Nhập mật khẩu" id="">
+                <div class="checkbox">
+                    <input type="checkbox" name="" id="remember-me">
+                    <label for="remember-me">Nhớ mật khẩu</label>
+                </div>
+                <input type="button" onclick="userLogin()" value="Đăng nhập" id="btn1">
+                <p><a href="#">Quên mật khẩu? </a></p>
+            </form>
+            <!-- đăng ký -->
+
+        </div>
+        <div class="register-form-container">
+
+            <div id="close-register-btn" class="fas fa-times"></div>
+
+            <form action="">
+                <h3>Đăng ký</h3>
+                <span>Số điện thoại/Email</span>
+                <input type="text" name="" class="box" placeholder="Nhập số điện thoại hoặc email" id="">
+                <span>Mật khẩu</span>
+                <input type="password" name="" class="box" placeholder="Nhập mật khẩu" id="">
+                <span>Nhập lại mật khẩu</span>
+                <input type="password" name="" class="box" placeholder="Nhập lại mật khẩu" id="">
+                <div class="checkbox">
+                    <input type="checkbox" name="" id="remember-me">
+                    <label for="remember-me">Nhớ mật khẩu</label>
+                </div>
+                <input type="button" value="Đăng ký" id="btn2">
+            </form>
+        </div>
+    </div>
+    <!--quang cao-->
+    <div class="ads">
+        <div class="ads-book">
+            <a href="../home.html"><img src="../Hình ảnh/ads.png" alt="quangcao"></a>
+            
+        </div>
+        <div id="close-ads-btn" class="fas fa-times"></div>
+    </div>
+</div>
+
+    <!--menu-->
+    <div class="menu-page">
+        <div class="menu-left">
+            <div id="main">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="dropdown-btn">Sách Văn Học
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="../lightnovel.html">Light Novel</a>
+                        <a href="../lichsu.html">Lịch sử</a>
+                    </div>
+                    <div class="dropdown-btn">Tự học
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="../ngoaingu.html">Ngoại ngữ</a>
+                    </div>
+                    <div class="dropdown-btn">Sách Tiếng Việt
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="../thieunhi.html">Thiếu Nhi</a>
+                    </div>
+                    <div class="dropdown-btn">Sách Đời Sống
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="../nauan.html">Nấu Ăn</a>
+                        <a href="../tamly-kynangsong.html">Tâm Lý</a>
+                    </div>
+                    <div class="dropdown-btn">Sách Văn Hoá
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="../Sách văn hóa/vanhoa.html">Bản Sắc Văn Hoá</a>
+                    </div>
+                </div>
+                <div class="container">
+                    <div >
+                        <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fas fa-bars" id="icon-menuleft"
+                            style="color: #A0522D; padding: 5px 50px; margin-top: -15px; display: block;"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="horizontal-menu">
+            <div class="menu">
+                <div class="menu-container">
+                    <ul class="list-menu">
+                        <li><a href="../home.html">Trang chủ</a></li>
+                        <li><a href="../footer/gioithieu.html">Giới thiệu</a></li>
+                        <li><a href="../footer/vanchuyen.html">Vận chuyển</a></li>
+                        <li><a href="../footer/csbm.html">Chính sách bảo mật</a></li>
+                        <li><a href="../footer/chinhsach.html">Liên hệ</a></li>
+                        <li><a href="../footer/dieukhoan.html">Điều khoản</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="noidung">
+        <div class="ndtrang">
+            <div class="empty" style="height: 20px;">
+
+            </div>
+        <h2>LIÊN HỆ ĐỔI / TRẢ / HOÀN TIỀN</h2>
+        <div class="note" style="text-align: justify;">
+            <p>
+                Chúng tôi luôn trân trọng sự tin tưởng và ủng hộ của khách hàng khi đặt mua sản phẩm tại BOOKSTORE. Do đó chúng tôi 
+                luôn cố gắng hoàn thiện dịch vụ tốt nhất phục vụ mọi nhu cầu mua sắm của quý khách.
+            </p>
+            <p>
+                BOOKSTOREchúng tôi luôn luôn cam kết tất cả các sản phẩm bán tại BOOKSTORE 100% là những sản phẩm chất lượng và xuất xứ nguồn gốc rõ ràng, 
+            hợp pháp cũng như an toàn cho người tiêu dùng.
+            </p>
+            <p>
+                Để việc mua sắm của quý khách tại BOOKSTORE là trải nghiệm dịch vụ thân thiện, chúng tôi hy vọng quý khách lúc nhận hàng kiểm tra kỹ lại:
+            </p>
+            <p >
+                - Số lượng. <br>
+                - Tên sản phẩm và chất lượng sản phẩm.<br>
+                - Thông tin sản phẩm, thông tin người nhận <i style="font-size: 18px;">(Đối chiếu với thông tin trên phiếu giao hàng được bỏ trong hộp)</i> trong lúc nhận hàng 
+                    trước khi ký nhận và thanh toán tiền cho nhân viên giao nhận.
+            </p>
+            <p>
+                Tuy nhiên để quý khách yên tâm hơn trong việc mua sắm và trải nghiệm dịch vụ của BOOKSTORE, chúng tôi xây dựng chính sách đổi/ trả/ hoàn 
+                tiền trên tinh thần bảo vệ quyền lợi người tiêu dùng nhằm cam kết với quý khách về chất lượng sản phẩm và dịch vụ của chúng tôi.
+            </p>
+            <p>
+                Khi quý khách hàng có hàng hóa mua tại BOOKSTORE cần đổi/ trả, xin quý khách hàng liên hệ với chúng tôi qua hotline 09876-54321 hoặc truy
+                 cập bookstorevn.com/doi-tra-hang để tìm hiểu thêm về chính sách đổi/trả:
+            </p>
+            <div class="time">
+                <h3><ins>1. Thời gian giải quyết đổi trả</ins></h3>
+                <p>
+                    - Khi nhận được yêu cầu từ quý khách, chúng tôi chỉ hỗ trợ quý khách đổi mặt hàng khác để phù hợp hơn với nhu cầu của quý khách/hủy đơn hàng. <br>
+                    - Nếu quý khách hủy đơn hàng cũ, đã chuyển khoản thanh toán thành công,mà không có nhu cầu đặt lại đơn hàng khác → chúng tôi sẽ hoàn tiền lại cho Quý khách trong vòng 7 ngày làm việc qua hệ thống ngân hàng kể từ ngày nhận và giải quyết yêu cầu cho quý khách.
+                </p>
+            </div>
+            <div class="condition">
+                <h3><ins>2. Điều kiện đổi trả:</ins></h3>
+                <p>BOOKSTORE hỗ trợ đổi/ trả sản phẩm cho quý khách nếu: <br>
+                    - Sản phẩm còn nguyên bao bì như hiện trạng ban đầu.<br>
+                    - Sản phầm còn đầy đủ phụ kiện, quà tặng khuyến mãi kèm theo.<br>
+                    - Hóa đơn GTGT (nếu có)
+                </p>
+            </div>
+            <div class="return-goods">
+                <h3><ins>3. Chính sách đổi trả</ins></h3>
+                <p>Chụp hình về tình trạng sản phẩm, nêu rõ lỗi kỹ thuật nếu có.</p>
+                <p>Chụp hình về tình trạng bao bì, chú ý các điểm như:
+                    - Sách có được bọc màng co hay không?<br>
+                    - Hộp có được chèn lót giấy vụn để bảo vệ khi vận chuyển hay không?<br>
+                    - Hộp bị ướt …?
+                </p>
+                <p>
+                   <b>1. Lỗi kỹ thuật của sản phẩm - do nhà cung cấp (sách thiếu trang, sút gáy, trùng nội dung, sản phẩm điện tử không hoạt động..) </b> <br>
+                      - BOOKSTORE có sản phẩm→ đổi mới cùng sản phẩm <br>
+                      - BOOKSTORE hết hàng→ Hoàn tiền (*)/ Quý khách có thể chọn mặt hàng khác tại website.
+                </p>
+                        
+                <p>
+                   <b> 2. Sản phẩm hỏng do quý khách sẽ không được hỗ trợ đổi/ trả.</b> <br>
+             Lý do được đổi/trả sản phẩm như: <br>
+ - Khách đặt nhầm hoặc không còn nhu cầu <br>
+ - Sản phẩm phải còn nguyên vẹn, không có dấu hiệu đã qua sử dụng.<br>
+ - còn đầy đủ phụ kiện và quà tặng kèm (nếu có).<br>
+                </p>
+                    <p>
+                        <b> 3. Giao nhầm/ giao thiếu ( thiếu sản phẩm đã đặt, thiếu phụ kiện, thiếu quà tặng kèm theo)</b><br>
+- Giao nhầm → Đổi lại đúng sản phẩm đã đặt. <br>
+- Giao thiếu → Giao bù thêm số lượng còn thiếu theo đơn hàng.
+                    </p>
+
+                        <p>
+                            <b>4. Chất lượng hàng hóa kém do vận chuyển</b> <br>
+Khi quý khách hàng nhận gói hàng bị móp méo, ướt, chúng tôi khuyến cáo khách hàng nên kiểm tra thực tế hàng hóa bên trong ngay thời điểm nhận hàng, 
+vui lòng phản ảnh hiện trang hàng hóa lên bill nhận hàng từ phía nhân viên giao nhận và liên lạc với chúng tôi về Hotline 09876-54321 trong vòng 48h 
+để được hỗ trợ giải quyết cụ thể. (*) Phương thức hoàn tiền: Thông qua tài khoản ngân hàng từ 2-7 ngày làm việc ( sau khi chúng tôi nhận được sản phẩm trả về).
+                        </p>
+
+                        <p>
+                            <b>Chúng tôi sẽ kiểm tra các trường hợp trên và giải quyết cho quý khách trong 30 ngày làm việc kể từ khi quý khách nhận được hàng, 
+                                quá thời hạn trên rất tiếc chúng tôi không giải quyết khiếu nại.</b>
+                        </p>
+            </div>
+        </div>
+        <div class="empty" style="height: 30px;">
+
+        </div>
+    </div>
+    </div>
+
+        <!--footer & copyright-->
+    <div class="footer">
+        <div class="leftfooter">
+            <p class="bookstore" style=" color: white;"> <b><i class="fas fa-book"></i> BOOKSTORE</b></p>
+                    <h2>Nhà sách Việt Nam</h2>
+                    <ul class="social-icon">
+                        <li><a href=""><i class="fa fa-facebook" style="padding:0 10px; color: white;"></i></a></li>
+                        <li><a href=""><i class="fa fa-instagram" style="color: white;"></i></a></li>
+                    </ul>
+        </div>
+        <div class="centerfooter">
+            <h2>THÔNG TIN</h2>
+                    <ul style="color: white;">
+                        <li><a style="text-decoration: none;" href="./csbm.html">Chính sách bảo mật</a> </li>
+                        <li><a style="text-decoration: none;" href="./dieukhoan.html">Điều khoản sử dụng</a> </li>
+                        <li><a style="text-decoration: none;" href="./chinhsach.html">Đổi - Trả - Hoàn tiền</a> </li>
+                        <li><a style="text-decoration: none;" href="./vanchuyen.html">Vận chuyển</a> </li>
+                    </ul>
+        </div>
+        <div class="rightfooter">
+            <h2>LIÊN HỆ</h2>
+            <ul>
+                <li>
+                    <span><i class="fa fa-map-marker"></i></span>
+                    <span>Địa chỉ: </span>456 Sư Vạn Hạnh, Quận 10, TP.HCM <br>
+                </li>
+                <li>
+                    <span><i class="fa fa-phone"></i></span>
+                    <span>Số điện thoại: </span>0987654321 <br>
+                </li>
+                <li>
+                    <span><i class="fa fa-envelope"></i></span>
+                    <span>Email: </span>bookstorevn@gmail.com <br>
+                </li>
+            </ul>
+        </div>
+        <!--back to top-->
+    <div class="back-to-top">
+        <button id="myBtn" title="Top">
+            <i class="fas fa-arrow-up" style=" width: 100%; height: 100%; padding: 8px ;"></i>
+        </button>
+    </div>
+    </div>
+
+    <!--copy right-->
+    <div class="copyright">
+        <div class="copy">
+            <p><i class="far fa-copyright"></i> Copyright 2021 | Bookstore Viet Nam 06</p>
+        </div>
+    </div>
+
+    <!--java-->
+    <!--java header-->
+    <script src="https://kit.fontawesome.com/6a3efc2315.js" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+
+    <!--jave menu left-->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.getElementById("icon-menuleft").style.float="left";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+        
+    </script>
+    <!--hien thi them-->    
+   <script>
+       var button1 = document.getElementById("bnt-hienthi");
+      
+   button1.onclick = function(){
+       button1.innerHTML = '';
+    };
+   </script>
+
+    <!--bnt top-->
+    <script>
+        window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+
+if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+document.getElementById("myBtn").style.display = "block";
+} else {
+document.getElementById("myBtn").style.display = "none";
+}
+}
+
+document.getElementById('myBtn').addEventListener("click", function(){
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+});
+    </script>
+</body>
+</html>

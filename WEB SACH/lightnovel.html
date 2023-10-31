@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Light Novel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/deco.css">
+    <link rel="stylesheet" href="./css/horizontal-menu.css">
+    <link rel="stylesheet" href="./css/product-item.css">
+    <link rel="stylesheet" href="./css/content.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+   <body>
+    
+    <!--header-->
+    <div class="header-page">
+        <header style="border-bottom-color: #A0522D;" class="header">
+
+            <div class="header-1">
+
+                <a href="./home.html" class="logo"> <i class="fas fa-book"></i> BOOKSTORE </a>
+
+                <form action="" class="search-form">
+                    <input type="search" name="" placeholder="Nhập sách cần tìm kiếm..." id="search-box">
+                    <label for="search-box" class="fas fa-search"></label>
+                </form>
+
+                <div class="icons" style="margin-top: 10px;">
+                    <div class="shopping" >
+                        <a href="./home.html" class="fas fa-shopping-cart"></a>
+                        <p>Giỏ hàng</p>
+                    </div>
+                    <div id="login">
+                        <div id="login-btn" >
+                            <a class="fas fa-sign-in-alt" style="margin-left: 25px;"></a>
+                            <p>Đăng Nhập</p>
+                        </div>
+                        <div id="register-btn">
+                            <a class="fas fa-user"></a>
+                            <p>Đăng ký</p>
+                        </div>
+                    </div>
+                    <div id="logout">
+                        <div style="display: flex;"><a class="fas fa-user"></a> <div id="hello-user"style="font-size: 1.8rem;"></div></div>
+                         <div id="logout-btn" >
+                            <a href="./home.html" style="font-size: 1.5rem;">Đăng xuất</a>
+                        </div>
+                    </div>
+                </div>
+               
+
+            </div>
+        </header>
+        <!--đăng nhập-->
+
+        <div class="login-form-container">
+
+            <div id="close-login-btn" class="fas fa-times"></div>
+
+            <form action="">
+                <h3>Đăng nhập</h3>
+                <span style="color: black;">Số điện thoại/Email</span>
+                <input type="text" name="" class="box" id="myText" placeholder="Nhập số điện thoại hoặc email" id="">
+                <span style="color: black;">Mật khẩu</span>
+                <input type="password" name="" class="box" placeholder="Nhập mật khẩu" id="">
+                <div class="checkbox">
+                    <input type="checkbox" name="" id="remember-me">
+                    <label for="remember-me">Nhớ mật khẩu</label>
+                </div>
+                <input type="button" onclick="userLogin()" value="Đăng nhập" id="btn1">
+                <p><a href="#">Quên mật khẩu? </a></p>
+            </form>
+            <!-- đăng ký -->
+
+        </div>
+        <div class="register-form-container">
+
+            <div id="close-register-btn" class="fas fa-times"></div>
+
+            <form action="">
+                <h3>Đăng ký</h3>
+                <span>Số điện thoại/Email</span>
+                <input type="text" name="" class="box" placeholder="Nhập số điện thoại hoặc email" id="">
+                <span>Mật khẩu</span>
+                <input type="password" name="" class="box" placeholder="Nhập mật khẩu" id="">
+                <span>Nhập lại mật khẩu</span>
+                <input type="password" name="" class="box" placeholder="Nhập lại mật khẩu" id="">
+                <div class="checkbox">
+                    <input type="checkbox" name="" id="remember-me">
+                    <label for="remember-me">Nhớ mật khẩu</label>
+                </div>
+                <input type="button" value="Đăng ký" id="btn2">
+            </form>
+        </div>
+        <!--quang cao-->
+        <div class="ads">
+            <div class="ads-book">
+                <a href="./home.html"><img src="./Hình ảnh/ads.png" alt=""></a>
+                
+            </div>
+            <div id="close-ads-btn" class="fas fa-times"></div>
+        </div>
+    </div>
+
+    <!--menu-->
+    <div class="menu-page">
+        <div class="menu-left">
+            <div id="main">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="dropdown-btn">Sách Văn Học
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="./lightnovel.html">Light Novel</a>
+                        <a href="./lichsu.html">Lịch sử</a>
+                    </div>
+                    <div class="dropdown-btn">Tự học
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="./ngoaingu.html">Ngoại ngữ</a>
+                    </div>
+                    <div class="dropdown-btn">Sách Tiếng Việt
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="./thieunhi.html">Thiếu Nhi</a>
+                    </div>
+                    <div class="dropdown-btn">Sách Đời Sống
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="./nauan.html">Nấu Ăn</a>
+                        <a href="./tamly-kynangsong.html">Tâm Lý</a>
+                    </div>
+                    <div class="dropdown-btn">Sách Văn Hoá
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="./Sách văn hóa/vanhoa.html">Bản Sắc Văn Hoá</a>
+                    </div>
+                </div>
+                <div class="container">
+                    <div >
+                        <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fas fa-bars" id="icon-menuleft"
+                            style="color: #A0522D; padding: 5px 50px; margin-top: -15px; display: block;"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="horizontal-menu">
+            <div class="menu">
+                <div class="menu-container">
+                    <ul class="list-menu">
+                        <li><a href="./home.html">Trang chủ</a></li>
+                        <li><a href="./footer/gioithieu.html">Giới thiệu</a></li>
+                        <li><a href="./footer/vanchuyen.html">Vận chuyển</a></li>
+                        <li><a href="./footer/csbm.html">Chính sách bảo mật</a></li>
+                        <li><a href="./footer/chinhsach.html">Liên hệ</a></li>
+                        <li><a href="./footer/dieukhoan.html">Điều khoản</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--nd-->
+    <div class="content-page">
+        <div class="empty" style="height: 10px;">
+            
+        </div>
+        <!--sach tieu thuyet-->
+            <div class="ngoaingu" >
+                <div class="header-khoi-sp d-flex">          
+                    <p style="font-size: 36px; color: rgb(216, 1, 48); margin-left: 20px; margin-top: 20px;">
+                        <img style="height: 30px; width: 30px; margin-left: 10px; margin-top: -5px;" src="https://cdn0.fahasa.com/skin/frontend/base/default/images/ico_dealhot.png" alt="snn"> Sách tiểu thuyết</p>          
+                    <div class="sort d-flex ml-auto" style="margin-top: 35px; right: 50px; margin-right: 50px;">
+                        <div class="hien-thi">
+                            <label for="hienthi-select" class="label-select">Hiển thị</label>
+                            <select class="hienthi-select">
+                                <option value="30">3</option>
+                                <option value="60">5</option>
+                            </select>
+                        </div>
+                        <div class="sap-xep">
+                            <label for="sapxep-select" class="label-select">Sắp xếp</label>
+                            <select class="sapxep-select">
+                                <option value="moinhat">Mới nhất</option>
+                                <option value="thap-cao">Giá: Thấp - Cao</option>
+                                <option value="cao-thap">Giá: Cao - Thấp</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row" style="margin-top: 10px;">
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="light novel/LN1.html"><img class="card-img-top anh" src="hình sách/lightnovel/5cm.jpg" alt="5cmtrengiay"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="light novel/LN1.html"><h3 class="card-title ten">5 Centimet Trên Giây - One More Side</h3></a>
+                                            <small class="tacgia text-muted">Shinkai Makoto, Kanoh Arata</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">77.420 ₫</div>
+                                                <div class="giacu text-muted">98.000 ₫</div>
+                                                <div class="sale">-21%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">10 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="light novel/LN2.html"><img class="card-img-top anh" src="hình sách/lightnovel/datealive1.jpeg" alt="date a live"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="light novel/LN2.html"><h3 class="card-title ten">Date A Live - Encore Tập 1</h3></a>
+                                            <small class="tacgia text-muted">Koushi Tachibana</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">86.400 ₫</div>
+                                                <div class="giacu text-muted">108.000 ₫</div>
+                                                <div class="sale">-20%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">1 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="light novel/LN3.html"><img class="card-img-top anh" src="hình sách/lightnovel/dietslime_4.jpg" alt="dietslime"></a>
+                                        <div class="card-body noidungsp mt-3">
+                                            <a href="light novel/LN3.html"><h3 class="card-title ten">Diệt Slime Suốt 300 Năm - Tập 9</h3></a>
+                                            <small class="tacgia text-muted">Morita Kisetsu</small>
+                                            <div class="gia d-flex align-items-baseline">
+                                                <div class="giamoi">96.000 ₫</div>
+                                                <div class="giacu text-muted">120.000 ₫</div>
+                                                <div class="sale">-20%</div>
+                                            </div>
+                                            <div class="danhgia">
+                                                <ul class="d-flex" style="list-style: none;">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <span class="text-muted">5 nhận xét</span>
+                                                </ul>
+                                            </div>
+                                        </div>
+                        </div>
+                    </div>              
+                </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-4">
+                            <div class="card">
+                                <a href="light novel/LN4.html"><img class="card-img-top anh" src="hình sách/lightnovel/grimgar__tap_11_2.jpg" alt="grimgar"></a>
+                                    <div class="card-body noidungsp mt-3">
+                                        <a href="light novel/LN4.html"><h3 class="card-title ten">Grimgar - Ảo Ảnh Và Tro Tàn Tập 11</h3></a>
+                                        <small class="tacgia text-muted">Ao Jyumonji, Eiri Shirai</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">68.000 ₫</div>
+                                            <div class="giacu text-muted">85.000 ₫</div>
+                                            <div class="sale">-20%</div>
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <span class="text-muted">0 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <a href="light novel/LN5.html"><img class="card-img-top anh" src="hình sách/lightnovel/hanh-trinh-elaina-tap-9.jpg" alt="elaina9"></a>
+                                    <div class="card-body noidungsp mt-3">
+                                        <a href="light novel/LN5.html"><h3 class="card-title ten">Hành Trình Của Elaina - Tập 9</h3></a>
+                                        <small class="tacgia text-muted">Jougi Shiraishi</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">94.400 ₫</div>
+                                            <div class="giacu text-muted">118.000 ₫</div>
+                                            <div class="sale">-20%</div>
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>                                                  
+                                                <span class="text-muted">10 nhận xét</span>
+                                            </ul>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+                <div class="pagination-bar my-3">
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-12">
+                            <nav>
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&rsaquo;</span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="end" style="height: 20px;">
+    
+                </div>
+            </div>
+        </div>
+    
+<!--footer & copyright-->
+<div class="footer">
+    <div class="leftfooter">
+        <p class="bookstore" style=" color: white;"> <b><i class="fas fa-book"></i> BOOKSTORE</b></p>
+                <h2>Nhà sách Việt Nam</h2>
+                <ul class="social-icon">
+                    <li><a href=""><i class="fa fa-facebook" style="padding:0 10px; color: white;"></i></a></li>
+                    <li><a href=""><i class="fa fa-instagram" style="color: white;"></i></a></li>
+                </ul>
+    </div>
+    <div class="centerfooter">
+        <h2>THÔNG TIN</h2>
+                <ul style="color: white;">
+                    <li><a style="text-decoration: none;" href="./footer/csbm.html">Chính sách bảo mật</a> </li>
+                    <li><a style="text-decoration: none;" href="./footer/dieukhoan.html">Điều khoản sử dụng</a> </li>
+                    <li><a style="text-decoration: none;" href="./footer/gioithieu.html">Đổi - Trả - Hoàn tiền</a> </li>
+                    <li><a style="text-decoration: none;" href="./footer/vanchuyen.html">Vận chuyển</a> </li>
+                </ul>
+    </div>
+    <div class="rightfooter">
+        <h2>LIÊN HỆ</h2>
+        <ul>
+            <li>
+                <span><i class="fa fa-map-marker"></i></span>
+                <span>Địa chỉ: </span>456 Sư Vạn Hạnh, Quận 10, TP.HCM <br>
+            </li>
+            <li>
+                <span><i class="fa fa-phone"></i></span>
+                <span>Số điện thoại: </span>0987654321 <br>
+            </li>
+            <li>
+                <span><i class="fa fa-envelope"></i></span>
+                <span>Email: </span>bookstorevn@gmail.com <br>
+            </li>
+        </ul>
+    </div>
+    <!--back to top-->
+<div class="back-to-top">
+    <button id="myBtn" title="Top">
+        <i class="fas fa-arrow-up" style=" width: 100%; height: 100%; padding: 8px ;"></i>
+    </button>
+</div>
+</div>
+
+<!--copy right-->
+<div class="copyright">
+    <div class="copy">
+        <p><i class="far fa-copyright"></i> Copyright 2021 | Bookstore Viet Nam 06</p>
+    </div>
+</div>
+
+<!--java-->
+<!--java header-->
+<script src="https://kit.fontawesome.com/6a3efc2315.js" crossorigin="anonymous"></script>
+<script src="./script.js"></script>
+
+<!--jave menu left-->
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.getElementById("icon-menuleft").style.float="left";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+    
+</script>
+<!--hien thi them-->    
+<script>
+   var button1 = document.getElementById("bnt-hienthi");
+  
+button1.onclick = function(){
+   button1.innerHTML = '';
+};
+</script>
+
+<!--bnt top-->
+<script>
+    window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+
+if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+document.getElementById("myBtn").style.display = "block";
+} else {
+document.getElementById("myBtn").style.display = "none";
+}
+}
+
+document.getElementById('myBtn').addEventListener("click", function(){
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+});
+</script>
+</body>
+</html>

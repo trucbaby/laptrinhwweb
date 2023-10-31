@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="li">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/deco.css">
+    <link rel="stylesheet" href="../css/horizontal-menu.css">
+    <link rel="stylesheet" href="../css/product-item.css">
+    <link rel="stylesheet" href="../css/content.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>Sách Tự Học 2000 Từ Vựng Tiếng Anh Theo Chủ Đề (Tái Bản)</title>
+
+<body>
+    <!--header-->
+    <div class="header-page">
+        <header style="border-bottom-color: #A0522D;" class="header">
+
+            <div class="header-1">
+
+                <a href="../home.html" class="logo"> <i class="fas fa-book"></i> BOOKSTORE </a>
+
+                <form action="" class="search-form">
+                    <input type="search" name="" placeholder="Nhập sách cần tìm kiếm..." id="search-box">
+                    <label for="search-box" class="fas fa-search"></label>
+                </form>
+
+                <div class="icons" style="margin-top: 10px;">
+                    <div class="shopping" >
+                        <a href="../home.html" class="fas fa-shopping-cart"></a>
+                        <p>Giỏ hàng</p>
+                    </div>
+                    <div id="login">
+                        <div id="login-btn" >
+                            <a class="fas fa-sign-in-alt" style="margin-left: 25px;"></a>
+                            <p>Đăng Nhập</p>
+                        </div>
+                        <div id="register-btn">
+                            <a class="fas fa-user"></a>
+                            <p>Đăng ký</p>
+                        </div>
+                    </div>
+                    <div id="logout">
+                        <div style="display: flex;"><a class="fas fa-user"></a> <div id="hello-user"style="font-size: 1.8rem;"></div></div>
+                         <div id="logout-btn" >
+                            <a href="../home.html" style="font-size: 1.5rem;">Đăng xuất</a>
+                        </div>
+                    </div>
+                </div>
+               
+
+            </div>
+        </header>
+        <!--đăng nhập-->
+
+        <div class="login-form-container">
+
+            <div id="close-login-btn" class="fas fa-times"></div>
+
+            <form action="">
+                <h3>Đăng nhập</h3>
+                <span style="color: black;">Số điện thoại/Email</span>
+                <input type="text" name="" class="box" id="myText" placeholder="Nhập số điện thoại hoặc email" id="">
+                <span style="color: black;">Mật khẩu</span>
+                <input type="password" name="" class="box" placeholder="Nhập mật khẩu" id="">
+                <div class="checkbox">
+                    <input type="checkbox" name="" id="remember-me">
+                    <label for="remember-me">Nhớ mật khẩu</label>
+                </div>
+                <input type="button" onclick="userLogin()" value="Đăng nhập" id="btn1">
+                <p><a href="#">Quên mật khẩu? </a></p>
+            </form>
+            <!-- đăng ký -->
+
+        </div>
+        <div class="register-form-container">
+
+            <div id="close-register-btn" class="fas fa-times"></div>
+
+            <form action="">
+                <h3>Đăng ký</h3>
+                <span>Số điện thoại/Email</span>
+                <input type="text" name="" class="box" placeholder="Nhập số điện thoại hoặc email" id="">
+                <span>Mật khẩu</span>
+                <input type="password" name="" class="box" placeholder="Nhập mật khẩu" id="">
+                <span>Nhập lại mật khẩu</span>
+                <input type="password" name="" class="box" placeholder="Nhập lại mật khẩu" id="">
+                <div class="checkbox">
+                    <input type="checkbox" name="" id="remember-me">
+                    <label for="remember-me">Nhớ mật khẩu</label>
+                </div>
+                <input type="button" value="Đăng ký" id="btn2">
+            </form>
+        </div>
+    </div>
+
+    <!--menu-->
+    <div class="menu-page">
+        <div class="menu-left">
+            <div id="main">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="dropdown-btn">Sách Văn Học
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="../lightnovel.html">Light Novel</a>
+                        <a href="../lichsu.html">Lịch sử</a>
+                    </div>
+                    <div class="dropdown-btn">Tự học
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="../ngoaingu.html">Ngoại ngữ</a>
+                    </div>
+                    <div class="dropdown-btn">Sách Tiếng Việt
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="../thieunhi.html">Thiếu Nhi</a>
+                    </div>
+                    <div class="dropdown-btn">Sách Đời Sống
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="../nauan.html">Nấu Ăn</a>
+                        <a href="../tamly-kynangsong.html">Tâm Lý</a>
+                    </div>
+                    <div class="dropdown-btn">Sách Văn Hoá
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="../Sách văn hóa/vanhoa.html">Bản Sắc Văn Hoá</a>
+                    </div>
+                </div>
+                <div class="container">
+                    <div >
+                        <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fas fa-bars" id="icon-menuleft"
+                            style="color: #A0522D; padding: 5px 50px; margin-top: -15px; display: block;"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="horizontal-menu">
+            <div class="menu">
+                <div class="menu-container">
+                    <ul class="list-menu">
+                        <li><a href="../home.html">Trang chủ</a></li>
+                        <li><a href="../footer/gioithieu.html">Giới thiệu</a></li>
+                        <li><a href="../footer/vanchuyen.html">Vận chuyển</a></li>
+                        <li><a href="../footer/csbm.html">Chính sách bảo mật</a></li>
+                        <li><a href="../footer/chinhsach.html">Liên hệ</a></li>
+                        <li><a href="../footer/dieukhoan.html">Điều khoản</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- nội dung của trang  -->
+    <div class="content-page">
+        <div class="container-page">
+            <!-- chi tiết 1 sản phẩm -->
+            <div class="product-detail p-4">
+                <div class="back-to-page">
+                    <a href="../home.html">Trang chủ</a> > <a href="../ngoaingu.html">Sách ngoại ngữ</a> > <a href="./NN5.html">Tự Học 2000 Từ Vựng Tiếng Anh Theo Chủ Đề</a>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-5 khoianh">
+                        <div class="anhto mb-4">
+                            <a class="active" href="../hình sách/sách học ngoại ngữ/tuhoctienganh.jpg" data-fancybox="thumb-img">
+                                <img class="product-image" src="../hình sách/sách học ngoại ngữ/tuhoctienganh.jpg" alt="2000tuvung" style="width: 100%;">
+                            </a>
+                            <a href="../hình sách/sách học ngoại ngữ/tuhoctienganh.jpg" data-fancybox="thumb-img"></a>
+                        </div>
+                        <div class="list-anhchitiet d-flex mb-4" style="margin-left: 2rem;">
+                            <img class="thumb-img thumb1 mr-3" src="../hình sách/sách học ngoại ngữ/tuhoctienganh.jpg" class="img-fluid" alt="2000tuvung">
+                            <img class="thumb-img thumb2" src="../hình sách/sách học ngoại ngữ/c8516f45954672182b57.jpg" class="img-fluid" alt="2000tv">
+                        </div>
+                    </div>
+                    <div class="col-md-7 khoithongtin">
+                        <div class="row">
+                            <div class="col-md-12 header">
+                                <h1 class="ten">Tự Học 2000 Từ Vựng Tiếng Anh Theo Chủ Đề (Tái Bản)</h1>
+                                <div class="rate">
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star "></i>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="gia">
+                                    <div class="giabia">Giá bìa:<span class="giacu ml-2">65.000 ₫</span></div>
+                                    <div class="giaban">Giá bán tại BookStore: <span
+                                            class="giamoi font-weight-bold">42.250 </span><span class="donvitien">₫</span></div>
+                                    <div class="tietkiem">Tiết kiệm: <b>22.750 ₫</b> <span class="sale">-35%</span>
+                                    </div>
+                                </div>
+                                <div class="uudai my-3">
+                                    <h6 class="header font-weight-bold">Khuyến mãi & Ưu đãi tại BookStore:</h6>
+                                    <ul>
+                                        <li><b>Miễn phí giao hàng </b>cho đơn hàng từ 150.000đ ở TP.HCM và 300.000đ ở
+                                            Tỉnh/Thành khác <a href="#">>> Chi tiết</a></li>
+                                        <li><b>Combo sách HOT - GIẢM 25% </b><a href="#">>>Xem ngay</a></li>
+                                        <li>Tặng Bookmark cho mỗi đơn hàng trên 100.000đ</li>
+                                        <li>Bao sách miễn phí cho đơn trên 150.000đ</li>
+                                    </ul>
+                                </div>
+                                <div class="soluong d-flex">
+                                    <label class="font-weight-bold">Số lượng: </label>
+                                    <div class="input-number input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text btn-spin btn-dec">-</span>
+                                        </div>
+                                        <input type="text" value="1" class="soluongsp  text-center">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text btn-spin btn-inc">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nutmua btn w-100 text-uppercase">Chọn mua</div>
+                            </div>
+                            <!-- thông tin khác của sản phẩm  -->
+                            <div class="col-md-5">
+                                <div class="thongtinsach">
+                                    <ul>
+                                        <li>Mã hàng : 8935246915486</li>
+                                        <li>Tác giả : <a href="#" class="tacgia">The Windy</a></li>
+                                        <li>Tên Nhà Cung Cấp : <b>MCBooks</b></li>
+                                        <li>Năm XB : <b>2019</b></li>
+                                        <li>Nhà xuất bản: <b>NXB Đại Học Quốc Gia Hà Nội</b></li>
+                                        <li>Hình thức bìa : <b>Bìa mềm</b></li>
+                                        <li>Ngôn Ngữ : <b>Tiếng Anh</b></li>
+                                        <li>Số trang : <b>260</b></li>
+                                        <li>Kích Thước Bao Bì : <b>14.5 x 9.5 cm</b></li>
+                                        <li>Trọng lượng(gr) : <b>280</b></li>
+                                        <li><b>Sản phẩm bán chạy nhất</b></li>
+                                        <li><b>Top 100 sản phẩm Từ Vựng bán chạy của tháng</b></li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-description col-md-9">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active text-uppercase" id="nav-gioithieu-tab"
+                                    data-toggle="tab" href="#nav-gioithieu" role="tab" aria-controls="nav-gioithieu"
+                                    aria-selected="true">Giới thiệu</a>
+                                <a class="nav-item nav-link text-uppercase" id="nav-danhgia-tab" data-toggle="tab"
+                                    href="#nav-danhgia" role="tab" aria-controls="nav-danhgia"
+                                    aria-selected="false">Đánh giá của độc giả</a>
+                                <a class="nav-item nav-link text-uppercase" id="nav-binhluan-tab"
+                                    data-toggle="tab" href="#nav-binhluan" role="tab" aria-controls="nav-binhluan"
+                                    aria-selected="false">Bình luận của độc giả</a>
+                            </div>
+                        </nav>
+                        <!-- nội dung -->
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active ml-3" id="nav-gioithieu" role="tabpanel"
+                                aria-labelledby="nav-gioithieu-tab">
+                                <h6 class="tieude font-weight-bold">Tự Học 2000 Từ Vựng Tiếng Anh Theo Chủ Đề (Tái Bản)</h6>                             
+                                <p>
+                                    <span>Nhà ngôn ngữ học nổi tiếng D.A.Wilkins đã nói rằng “Without grammar, very little can be conveyed; without vocabulary, nothing can be conveyed.”
+                                         (Không có ngữ pháp, rất ít thông tin có thể được truyền đạt; Không có từ vựng, không một thông tin nào có thể được truyền đạt cả). Vì thế, trong việc học một ngoại ngữ, thì từ vựng có thể xem như các tế bào nhỏ hình thành nên khả năng sử dụng ngoại ngữ của người học.
+                                    </span>
+                                </p>
+                                <p>
+                                    <span>Các bạn đang băn khoăn chưa biết nên học từ vựng như thế nào để có thể ghi nhớ được nhiều từ và lâu nhất. Dưới đây là những phương pháp học mà các bạn có thể áp dụng để học từ vựng hiệu quả nhất.</span>
+                                </p>
+                                <p>
+                                    <span>
+                                        <b>1. Học từ vựng theo chủ đề : </b>
+                                        Thay vì học riêng lẻ từng từ rời rạc, nếu các bạn biết nhóm chúng vào cùng một chủ đề thì đảm bảo việc học thuộc sẽ trở nên đơn giản hơn rất nhiều luôn. Có vốn từ vựng theo chủ đề, khi làm bài thi nói hoặc viết theo một chủ đề nào đó bạn sẽ phát huy được tối đa vốn từ vựng. Khiến bài nói và bài viết của bạn trôi chảy và nhiều ý tưởng. Vì vậy, việc học từ theo chủ đề cũng giống như một mũi tên trúng hai đích vậy, vừa giúp chúng ta biết thêm nhiều từ mới, vừa có nhiều từ vựng và ý hay để triển khai cho bài thi được tốt hơn.
+                                    </span>
+                                </p>
+                                <p>
+                                    <span>
+                                        <b>2. Sử dụng hình ảnh, âm thanh hay câu chuyện để ghi nhớ từ vựng nhanh : </b>
+                                        Thực tế cho thấy, cách mà nhiều người thường hay học từ vựng đó là viết từ vựng đó kèm nghĩa ra giấy thật nhiều lần để ghi nhớ. Tuy nhiên, cách này có thể hiệu quả tức thời nhưng về lâu về dài, nếu không sử dụng lại thì chắc chắn ta sẽ quên từ. Ngược lại, nếu sử dụng những hình ảnh, âm thanh hay câu chuyện ấn tượng thì có thể khiến não bộ chúng ta nhớ rất mãi. Cách thức học này cũng vô cùng đơn giản, khi chúng ta học một từ mới, hãy cố gắng tự nghĩ ý tưởng và minh họa cho nó bằng hình ảnh ngộ nghĩnh, khi học một nhóm từ vựng theo chủ đề, hãy cố gắng sắp xếp chúng vào thành một đoạn văn, kể về một câu chuyện thú vị.
+                                    </span>
+                                </p>
+                                <p>
+                                    <span><b>3. Học từ vựng qua bài hát, phim ảnh : </b>
+                                        Nhiều lúc do tâm lý nghĩ học tập là một gánh nặng, bắt buộc phải học mà khiến chúng ta mất đi niềm vui trong việc tiếp nhận tri thức. Nếu các bạn có thể giải tỏa tâm lý đó bằng việc nghe nhạc hay xem phim thì sẽ khiến từ mới “vào đầu” dễ dàng hơn mà không khiến ta chán nản khi học. Các bạn nên học từ vựng bằng những phim từ mức độ thấp đến cao. Rất nhiều bộ phim hay để học tiếng Anh như: Extra English, Friends, How I met your mother?...</span>
+                                </p>
+                                <p>
+                                    <span>
+                                        <b>4. Luôn có một cuốn sổ tay ghi từ mới : </b> 
+                                        Cuốn sổ này sẽ cực kì hữu ích cho bạn trong việc học mọi lúc mọi nơi. Mỗi ngày bạn hay ghi vào quyển sổ đó những từ mới học được bao gồm nghĩa, họ từ và ngày nào cũng mở ra đọc và học lại như vậy từ vựng đó sẽ không bao giờ có thể quên được.
+                                    </span>
+                                </p>
+                                <p>
+                                    <span>
+                                        <b>5. Tập sử dụng các từ mới và ôn tập thường xuyên : </b> 
+                                        Sau khi học các từ mới, bạn nên tập sử dụng chúng hàng ngày.
+                                    </span>
+                                </p>
+                               
+                            </div>
+                            <div class="tab-pane fade" id="nav-danhgia" role="tabpanel" aria-labelledby="nav-danhgia-tab">
+                                <div class="row">
+                                    <div class="col-md-3 text-center">
+                                        <p class="tieude">Đánh giá trung bình</p>
+                                        <div class="diem">0/5</div>
+                                        <div class="sao">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <p class="sonhanxet text-muted">(0 nhận xét)</p>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="tiledanhgia text-center">
+                                            <div class="motthanh d-flex align-items-center">5 <i class="fa fa-star"></i>
+                                                <div class="progress mx-2">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="0"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div> 0%
+                                            </div>
+                                            <div class="motthanh d-flex align-items-center">4 <i class="fa fa-star"></i>
+                                                <div class="progress mx-2">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="0"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div> 0%
+                                            </div>
+                                            <div class="motthanh d-flex align-items-center">3 <i class="fa fa-star"></i>
+                                                <div class="progress mx-2">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="0"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div> 0%
+                                            </div>
+                                            <div class="motthanh d-flex align-items-center">2 <i class="fa fa-star"></i>
+                                                <div class="progress mx-2">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="0"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div> 0%
+                                            </div>
+                                            <div class="motthanh d-flex align-items-center">1 <i class="fa fa-star"></i>
+                                                <div class="progress mx-2">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="0"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div> 0%
+                                            </div>
+                                            <div class="btn vietdanhgia mt-3">Viết đánh giá của bạn</div>
+                                        </div>
+                                        <!-- nội dung của form đánh giá  -->
+                                        <div class="formdanhgia">
+                                            <h6 class="tieude text-uppercase">GỬI ĐÁNH GIÁ CỦA BẠN</h6>
+                                            <span class="danhgiacuaban">Đánh giá của bạn về sản phẩm này:</span>
+                                            <div class="stars">
+                                                <form action="ratingstar">
+                                                  <input class="star star-5" id="star-5" type="radio" name="star"/>
+                                                  <label class="star star-5" for="star-5"></label>
+                                                  <input class="star star-4" id="star-4" type="radio" name="star"/>
+                                                  <label class="star star-4" for="star-4"></label>
+                                                  <input class="star star-3" id="star-3" type="radio" name="star"/>
+                                                  <label class="star star-3" for="star-3"></label>
+                                                  <input class="star star-2" id="star-2" type="radio" name="star"/>
+                                                  <label class="star star-2" for="star-2"></label>
+                                                  <input class="star star-1" id="star-1" type="radio" name="star"/>
+                                                  <label class="star star-1" for="star-1"></label>
+                                                </form>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="txtFullname w-100" placeholder="Mời bạn nhập tên(Bắt buộc)">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="txtEmail w-100" placeholder="Mời bạn nhập email(Bắt buộc)">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="txtComment w-100" placeholder="Đánh giá của bạn về sản phẩm này">
+                                            </div>
+                                            <div class="btn nutguibl">Gửi bình luận</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-binhluan" role="tabpanel" aria-labelledby="nav-binhluan-tab">
+                                <div class="card1">
+                                    <div class="card-body1">
+                                        <div class="row-2">
+                                            <div class="col-xs-2">
+                                                <img src="../Hình ảnh/avatar.png" class="img img-rounded img-fluid" style="max-width: 60px;max-height: 60px;">
+                                                <p class="text-center"><strong>Diệp Lan Anh</strong></p>
+                                            </div>
+                                            <div class="col-xs-2">
+                                                <p>
+                                                    <a class="float-left text-secondary">1 giờ trước</a>
+                                                    <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                                                    <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                                                    <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                                                    <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                            
+                                               </p>
+                                               <div class="clearfix"></div>
+                                                <p>Tôi cho cuốn này 5 sao, NHƯNG có một sự phản đối: Nếu muốn một cuốn đọc cho nhanh, cuốn sách này không dành cho bạn. Nếu chỉ thích những cái kết có hậu, cuốn sách này không dành cho bạn. Nếu không thích bối cảnh lãng mạn, cuốn sách này cũng không dành cho bạn.
+
+                                                    Nếu bạn muốn đọc cuốn sách này và quan tâm đến những nhân vật trong đó và ngốn từng con chữ như thể đó là kem và đồng thời muốn vừa hụt hẫng vừa vui mừng trong cùng một trang sách, thì cuốn này dành cho bạn.</p>
+                                                <p>
+                                                    <a class="float-right btn btn-outline-primary ml-2"> <i class="fa fa-reply"></i> Trả lời</a>
+                                                    <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> Thích</a>
+                                               </p>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="card1 card-inner">
+                                            <div class="card-body1">
+                                                <div class="row-2">
+                                                    <div class="col-xs-2">
+                                                        <img src="../Hình ảnh/avatar.png" class="img img-rounded img-fluid" style="max-width: 60px;max-height: 60px;"/>
+                                                        <p class="text-center"><strong>Nguyễn Văn Tèo</strong></p>
+                                                    </div>
+                                                    <div class="col-xs-2">
+                                                        <p><a class="float left text-secondary">15 phút trước</a></p>
+                                                        <p>Tôi đồng ý với bạn Lan. Tôi đã đọc lại toàn bộ series vào hè năm ngoái và thích nó ngay lập tức. Hãy đọc vì nó: lố bịch, viết hay, hài hước, lãng mạn một cách thú vị. Đừng mong nó là cuốn tiểu thuyết tuyệt vời nhất và bạn sẽ ổn thôi.</p>
+                                                        <p>
+                                                            <a class="float-right btn btn-outline-primary ml-2">  <i class="fa fa-reply"></i> Trả lời</a>
+                                                            <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> Thích</a>
+                                                       </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--footer & copyright-->
+<div class="footer">
+    <div class="leftfooter">
+        <p class="bookstore" style=" color: white;"> <b><i class="fas fa-book"></i> BOOKSTORE</b></p>
+                <h2>Nhà sách Việt Nam</h2>
+                <ul class="social-icon">
+                    <li><a href=""><i class="fa fa-facebook" style="padding:0 10px; color: white;"></i></a></li>
+                    <li><a href=""><i class="fa fa-instagram" style="color: white;"></i></a></li>
+                </ul>
+    </div>
+    <div class="centerfooter">
+        <h2>THÔNG TIN</h2>
+                <ul style="color: white;">
+                    <li><a style="text-decoration: none;" href="../footer/csbm.html">Chính sách bảo mật</a> </li>
+                    <li><a style="text-decoration: none;" href="../footer/dieukhoan.html">Điều khoản sử dụng</a> </li>
+                    <li><a style="text-decoration: none;" href="../footer/gioithieu.html">Đổi - Trả - Hoàn tiền</a> </li>
+                    <li><a style="text-decoration: none;" href="../footer/vanchuyen.html">Vận chuyển</a> </li>
+                </ul>
+    </div>
+    <div class="rightfooter">
+        <h2>LIÊN HỆ</h2>
+        <ul>
+            <li>
+                <span><i class="fa fa-map-marker"></i></span>
+                <span>Địa chỉ: </span>456 Sư Vạn Hạnh, Quận 10, TP.HCM <br>
+            </li>
+            <li>
+                <span><i class="fa fa-phone"></i></span>
+                <span>Số điện thoại: </span>0987654321 <br>
+            </li>
+            <li>
+                <span><i class="fa fa-envelope"></i></span>
+                <span>Email: </span>bookstorevn@gmail.com <br>
+            </li>
+        </ul>
+    </div>
+    <!--back to top-->
+<div class="back-to-top">
+    <button id="myBtn" title="Top">
+        <i class="fas fa-arrow-up" style=" width: 100%; height: 100%; padding: 8px ;"></i>
+    </button>
+</div>
+</div>
+
+<!--copy right-->
+<div class="copyright">
+    <div class="copy">
+        <p><i class="far fa-copyright"></i> Copyright 2021 | Bookstore Viet Nam 06</p>
+    </div>
+</div>
+
+<!--java-->
+<!--java header-->
+<script src="https://kit.fontawesome.com/6a3efc2315.js" crossorigin="anonymous"></script>
+<script src="../script.js"></script>
+
+<!--jave menu left-->
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.getElementById("icon-menuleft").style.float="left";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+    
+</script>
+<!--hien thi them-->    
+<script>
+   var button1 = document.getElementById("bnt-hienthi");
+  
+button1.onclick = function(){
+   button1.innerHTML = '';
+};
+</script>
+
+<!--bnt top-->
+<script>
+    window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+
+if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+document.getElementById("myBtn").style.display = "block";
+} else {
+document.getElementById("myBtn").style.display = "none";
+}
+}
+
+document.getElementById('myBtn').addEventListener("click", function(){
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+});
+</script>
+</body>
+</html>

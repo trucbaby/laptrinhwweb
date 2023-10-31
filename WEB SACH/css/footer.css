@@ -1,0 +1,97 @@
+
+
+/* Mui ten lên dau trang */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    outline: none;
+    border: 3px solid rgb(177, 57, 2) ;
+    background-color: rgb(216, 69, 1) ;
+    border-radius: 10px;
+    z-index: 99;
+    }
+    .back-to-top{
+        font-size: 3rem;
+    }
+    .back-to-top i{
+        color: white;
+    }
+    #myBtn:hover {
+    background-color: rgb(206, 93, 40) ;
+    bottom: 25px;
+    }
+    .back-to-top i:hover{
+        color: white;
+    }
+    
+    /* footer*/
+    .footer{
+    height: 200px;
+    width: 100%;
+    background-color: #caa575;
+    color: white;
+    margin-top: 40px;
+}
+.bookstore{
+    font-size: 40px;
+}
+.footer h1{
+    font-size: 100px;
+}
+.footer h2{
+    color: white
+}
+.footer ul{
+    margin-top: 10px;
+    list-style: none;
+    padding-inline-start: 0;
+}
+.footer > div{
+    display: inline-block;
+}
+.footer .social-icon{
+    display: flex;
+    font-size: 2rem;  
+}
+
+.leftfooter{
+    display: block;
+    font-size: 18px;
+    margin-left: 150px;
+    margin-top: -80px;
+}
+.centerfooter{
+    font-size: 17px;
+    margin-top: 30px;
+    margin-left: 190px;
+}
+
+.centerfooter a:hover{
+    color: black;
+}
+.centerfooter a{
+    color: white;
+}
+.rightfooter{
+    font-size: 17px;
+    margin-top: 30px;
+    float: right;
+    margin-right: 150px;
+}
+
+/*copyright*/
+.copyright{
+    background-color: #d6b589;
+    height: 20px;
+    font-size: 13px;
+    display: block;
+    color: white;
+    text-align: center;
+}
+.copyright .copy{
+    display: block;
+    margin-left: 660px;
+    
+}
